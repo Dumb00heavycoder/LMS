@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="registration-container">
+        <h1>Create a New Account</h1>
+        <!-- Display Flask messages -->
+       <!--{% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}--> 
+        
+        <!-- Registration Form -->
+        <form method="POST">
+            <div class="form-group">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login.html">Login here</a></p>
+    </div>
+
+</body>
+    <style>
+        body {
+            color: #272525;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ background: radial-gradient(circle at center,rgb(8, 108, 230), violet);
+    height: 100vh;
+}
+
+.registration-container {
+    background-color: #909cee;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgba(61, 15, 225, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #070606;
+    border-radius: 40px;
+    color: #1f1e1e;
+    background-color: #f0e4e4;
+    outline: none;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #171616;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight:bolder ;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #540feb;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+    </style>
+</html>

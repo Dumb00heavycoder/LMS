@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+
+       
+                <div class="messages">
+                    Enter your details 
+                        <div class="alert {{ category }}">
+                           
+                        </div>
+                    
+                </div>
+            
+        
+
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+           <a href="index.html"> <button>Login</button> </a>
+        </form>
+        <a href="newacc.html">New User?Register Here</a>
+    </div>
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+
+body {
+    background: radial-gradient(circle at center,rgb(8, 27, 230), rgb(130, 141, 238));
+    font-family: 'Arial', sans-serif;
+    background-color: #6e2ae2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for Login */
+.login-container {
+    background-color: #613fdc;
+    width: 350px;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(10, 10, 10, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #218838;
+}
+.login-container a {
+    padding: 10px;
+    margin-top: 10px;
+}
+/* Flash Messages */
+.messages {
+    margin-bottom: 20px;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.alert.success {
+    background-color: #28a745;
+}
+
+.alert.danger {
+    background-color: #dc3545;
+}
+
+/* Welcome Page Styles */
+.welcome-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.welcome-container h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    color: #555;
+}
+</style>
+</html>

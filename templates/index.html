@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRMIST Library Management System</title>
+    <!-- Link to local CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+<header>
+    <div class="logo">SRMIST Central Library</div>
+    <nav class="navbar">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>  
+        <a href="">Services</a>
+        <a class="fa-solid fa-bars"> </a>
+    </nav>
+</header>
+<div class="carousel">
+    <div class="list">
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img1.png') }}">
+            <div class="introduce">
+                <div class="topic">Central Library</div>
+                <div class="des">
+                    The Central Library at SRM IST, NCR Campus is a modern knowledge hub, providing extensive resources and Wi-Fi access.
+                </div>
+                <button class="seeMore">ABOUT</button>
+            </div>
+            <div class="detail">
+                <div class="title">Central Library SRMIST Delhi-NCR Campus</div>
+                <div class="des">
+                    The Central Library of the institute facilitates the academic and research community of the Institute...
+                    <div class="specifications"></div>
+                    <div class="span"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img2.png') }}">
+            <div class="introduce">
+                <div class="topic">Student Profile</div>
+                <div class="des">
+                    Students can see the books issued and the due date of each book issued in this section.
+                </div>
+                <button class="seeMore">VIEW</button>
+            </div>
+            <div class="detail">
+                <div class="title"></div>
+                <div class="des">
+                    <h1>Manan Aggarwal</h1>
+                    <h2>RA2411056030141</h2>
+                    <h2>B Tech CSE Data Science-C</h2>
+                    <h3>Year-First</h3>
+                    <h4>Issued Book Details:</h4>
+                </div>
+                <div class="specifications">
+                    <div>
+                        <p style="font-weight: bold;">Book Name </p>
+                        <p>Ansi C</p>
+                        <p>Biology</p>
+                        <p>Algorithm</p>
+                        <p>German</p>
+                    </div>
+                    <div>
+                        <p>Due Date</p>
+                        <p>23-10-24</p>
+                        <p>13-10-24</p>
+                        <p>18-10-24</p>
+                        <p>27-10-24</p>
+                    </div>
+                    <div>
+                        <p>Issue Date</p>
+                        <p>15-10-24</p>
+                        <p>05-10-24</p>
+                        <p>10-10-24</p>
+                        <p>19-10-24</p>
+                    </div>
+                </div>
+                <div class="checkout"></div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img3.png') }}">
+            <div class="introduce">
+                <div class="topic">Books</div>
+                <div class="des">
+                    Here the student can check whether the desired book is available or not...
+                </div>
+                <button class="seeMore">VIEW</button>
+            </div>
+            <div class="detail">
+                <div class="title">
+                    <h1 style="font-size:large;">Search Books you need</h1>
+                </div>
+                <div>
+                    <section class="container">
+                        <form>
+                            <i style="font-size: large;" class="fa-brands fa-searchengin"></i>
+                            <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for books...">
+                        </form>
+                        <span class="searchList" id="searchList">
+                            <ul>
+                               <a <li><button>Preview</button></a>
+                                 Data structures using C
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Data structures using c++
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Design and analysis of algorithms
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Design and Analysis of Algorithms
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Core Java
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Artificial Intelligence
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Mechanical Vibrations
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Fluid Mechanics
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Heat and Mass Transfer
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Computer Oriented Numerical Methods
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Financial Management
+                                </li>
+
+                                <li><button>Preview</button>
+                                 Human Values and professional ethics    
+                                </li>
+                                <li><button>Preview</button>
+                                 Business Law
+                                 </li>
+                                 <li><button>Preview</button>
+                                 Labour Laws
+                                 </li>
+                                 <li><button>Preview</button>
+                                 Wings of Fire
+                                 </li>
+                                
+                            </ul>
+                        </span>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img4.png') }}">
+            <div class="introduce">
+                <div class="topic">Fine Payment</div>
+                <div class="des">
+                    Here the student can check and pay the applicable fine on each of the books issued.
+                </div>
+                <button class="seeMore">VIEW&#8599</button>
+            </div>
+            <div class="detail">
+                <div class="des">
+                    <h1>Fine amount on the issued books:</h1>
+                </div>
+                <div class="specifications">
+                    <div>
+                        <p>Books Issued</p>
+                        <p style="font-weight: bold;">Ansi C</p>
+                        <p style="font-weight: bold;">Biology</p>
+                        <p style="font-weight: bold;">Algorithm</p>
+                        <p style="font-weight: bold;">German</p>
+                    </div>
+                    <div>
+                        <p style="font-weight: bolder;">Fine Amount</p>
+                        <p style="font-weight: bold;">0/-</p>
+                        <p style="font-weight: bold;">7/-</p>
+                        <p style="font-weight: bold;">2/-</p>
+                        <p style="font-weight: bold;">0/-</p>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <a href="about.html">
+                        <button class="seeMore">PAY&#8599</button>
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img5.png') }}">
+            <div class="introduce">
+                <div class="topic">My Cart</div>
+                <div class="des">
+                    Here the student can add the books to cart and check their availability.
+                </div>
+                <button class="seeMore">VIEW</button>
+            </div>
+            <div class="detail">
+                <h1 class="fa-solid fa-cart-shopping"></h1>
+                <h1>My Cart</h1>
+                <div class="des">
+                    <ul style="font-weight: bold;">
+                        <li>Engineering Mathematics</li>
+                        <li>English</li>
+                        <li>Data Structure using Java</li>
+                        <li>Material Science</li>
+                        <li>Living Stress Free Life</li>
+                    </ul>
+                </div>
+                <div class="specifications"></div>
+                <div class="checkout">
+                    <button>CHECKOUT</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="item">
+            <img src="{{ url_for('static', filename='images/img6.png') }}">
+            <div class="introduce">
+                <div class="topic">Review</div>
+                <div class="des">
+                    Here we can review the books issued by the student.
+                </div>
+                <button class="seeMore">VIEW</button>
+            </div>
+            <div class="detail">
+                <h1>Reviews</h1>
+                <h2>Ansi C</h2>
+                <div class="star-rating">
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+                <h2>Biology</h2>
+                <div class="star-rating">
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+                <h2>Algorithm</h2>
+                <div class="star-rating">
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+                <h2>German</h2>
+                <div class="star-rating">
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+                <div class="des"></div>
+                <div class="specifications"></div>
+                <div class="checkout"></div>
+            </div>
+        </div>
+    </div>
+    <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+        <button id="back">Back  &#8599</button>
+    </div>
+</div>
+
+<style>
+    .star-rating {
+        direction: rtl;
+        display: inline-block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .star-rating input {
+        display: none;
+    }
+    .star-rating label {
+        color: lightgray;
+    }
+    .star-rating input:checked ~ label {
+        color: gold;
+    }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+        color: gold;
+    }
+</style>
+
+<!-- Link to local JS file -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
